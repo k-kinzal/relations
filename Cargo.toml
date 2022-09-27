@@ -1,6 +1,6 @@
 [package]
 name = "relations"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -12,8 +12,8 @@ env_logger = "0.9.1"
 futures-util = "0.3.24"
 itertools = "0.10.5"
 log = "0.4.17"
-serde = "1.0.145"
+serde = { version = "1.0.145", features = ["derive"] }
 serde_yaml = "0.9.13"
-sqlx = { version = "0.6.2", features = ["runtime-tokio-native-tls", "postgres", "mysql"] }
+sqlx = { version = "0.6.2", features = ["runtime-tokio-rustls", "mysql"] }
 tokio = { version = "1.21.1", features = ["full"] }
 url = "2.3.1"
